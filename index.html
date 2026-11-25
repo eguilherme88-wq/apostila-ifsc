@@ -513,4 +513,17 @@ document.querySelectorAll(".tab").forEach(function(x){x.classList.toggle("on",x=
 document.querySelectorAll(".pane").forEach(function(p){p.hidden=(p.id!==t.dataset.p);});
 window.scrollTo(0,0);});});
 </script>
-</main></body></html>
+</main><div id="avisoProva" role="dialog" aria-modal="true" aria-labelledby="avisoTit" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px">
+<div style="background:var(--card);color:var(--tx);border:3px solid var(--ac);border-radius:14px;max-width:440px;width:100%;padding:22px 20px;box-shadow:0 10px 30px rgba(0,0,0,.35);text-align:center">
+<div style="font-size:2.4rem;line-height:1">⚠️</div>
+<h2 id="avisoTit" style="margin:.3em 0 .4em;border:0;padding:0;color:var(--ac);font-size:1.4rem">FIQUE ATENTO!</h2>
+<p style="margin:.3em 0;font-size:1.05rem">A prova do <b>IFSC – Médio Técnico</b> será realizada no <b>próximo domingo, dia 29/11</b>.</p>
+<p style="margin:.6em 0;background:var(--box);border-radius:10px;padding:8px 10px;font-size:.95rem">🕑 Portões abrem às <b>13h45</b> · Início às <b>14h</b><br>📝 28 questões · até 4 horas</p>
+<p style="margin:.4em 0 .2em;font-size:.95rem;text-align:left"><b>Leve no dia:</b></p>
+<ul style="margin:0 0 .6em;padding-left:1.2em;text-align:left;font-size:.95rem"><li>Documento oficial com foto (RG, CIN, CNH ou passaporte)</li><li>Caneta esferográfica de tinta preta ou azul</li></ul>
+<button type="button" id="avisoOk" style="background:var(--ac);color:#fff;border:0;border-radius:10px;padding:11px 22px;font-size:1rem;font-weight:600;cursor:pointer;width:100%">Entendi, vamos estudar! 💪</button>
+</div></div>
+<script>(function(){var a=document.getElementById("avisoProva");if(new Date()>new Date("2026-11-29T23:59:59-03:00")){a.remove();return;}
+document.getElementById("avisoOk").addEventListener("click",function(){a.remove();});
+a.addEventListener("click",function(e){if(e.target===a)a.remove();});})();</script>
+</body></html>
